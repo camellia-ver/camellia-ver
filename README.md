@@ -69,6 +69,30 @@ https://github.com/camellia-ver/ClearSky
 https://github.com/camellia-ver/stock-predictor
 
 ---
+### 📈 Stock News Alert
+
+주가 변동률이 임계값을 초과할 경우 관련 뉴스를 자동 수집하여 Discord로 전송하는 자동화 서비스
+
+**Tech Stack**
+`Python` `pykrx` `NewsAPI` `Discord Webhook`
+
+#### What I Solved
+
+* 주가 데이터와 뉴스 데이터를 결합한 이벤트 기반 알림 시스템 구현
+* 여러 외부 API를 활용한 데이터 수집 및 통합 처리
+* 임계값 기반 모니터링을 통한 자동 뉴스 탐지 프로세스 구축
+
+#### Result
+
+* 가격 급등락 발생 시 관련 뉴스를 자동 수집 및 전송
+* 사용자 개입 없이 동작하는 모니터링 파이프라인 구축
+* Discord 기반 실시간 알림 시스템 구현
+
+🔗 Repository
+https://github.com/camellia-ver/stock-news-alert
+
+
+---
 ### ⚾ Baseball Alert
 
 KBO 경기 정보 및 TV 중계 자동 알림 시스템
