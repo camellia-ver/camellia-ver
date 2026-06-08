@@ -164,5 +164,4 @@ https://github.com/camellia-ver/BudgetManager
 
 ## 📫 Contact
 
-GitHub
-https://github.com/camellia-ver
+E-mail: jakahi435@gmail.com
