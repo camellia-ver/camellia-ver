@@ -9,6 +9,21 @@
 * 🚀 GitHub Actions를 활용한 CI/CD 및 운영 자동화
 
 ---
+## 🛠 Tech Stacks
+
+### 💻 Java & Web Backend
+<img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white"/> <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring&logoColor=white"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+
+### ⚙️ Automation & Data Engineering
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white"/>
+
+### 🏛️ C# & .NET Ecosystem 
+<img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white"/> <img src="https://img.shields.io/badge/--.NET_8-512BD4?style=flat-square&logo=.net&logoColor=white"/> <img src="https://img.shields.io/badge/WinForms-512BD4?style=flat-square"/>
+
+### 🔬 Experienced & Learning 
+<img src="https://img.shields.io/badge/Spring_WebFlux-6DB33F?style=flat-square&logo=spring&logoColor=white"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+
+---
 
 ## 🎯 Interests
 
