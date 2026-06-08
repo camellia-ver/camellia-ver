@@ -20,7 +20,7 @@
 
 ---
 
-## 🚀 Featured Project
+## 🚀 Project
 
 ### 🌤 ClearSky
 
@@ -46,50 +46,75 @@ https://github.com/camellia-ver/ClearSky
 
 ---
 
-## 📈 Other Projects
-
-### Stock Predictor
+### 📈 Stock Predictor
 
 주가 분석 및 머신러닝 예측 웹 서비스
 
-* 대용량 CSV 데이터 Batch/병렬 적재
-* Random Forest, XGBoost, LightGBM 앙상블 모델 활용
-* pykrx 수집 파이프라인 안정화
+**Tech Stack**
+`Spring Boot` `Python` `scikit-learn` `MySQL` `Chart.js`
 
-**Stack**
-`Spring Boot` `Python` `scikit-learn` `MySQL`
+#### What I Solved
 
-🔗 https://github.com/camellia-ver/stock-predictor
+* 대용량 CSV 데이터 적재 시 발생하는 초기 로딩 지연 문제 개선
+* pykrx API 차단 문제 대응을 위한 안정적인 수집 파이프라인 구축
+* 머신러닝 모델 단일 예측의 한계를 보완하기 위한 앙상블 모델 적용
+
+#### Result
+
+* Batch 및 병렬 처리를 통해 데이터 적재 시간 단축
+* 예외 처리 및 요청 제어를 통해 데이터 수집 안정성 확보
+* Random Forest, XGBoost, LightGBM 기반 예측 결과 제공
+
+🔗 Repository
+https://github.com/camellia-ver/stock-predictor
 
 ---
-
-### Baseball Alert
+### ⚾ Baseball Alert
 
 KBO 경기 정보 및 TV 중계 자동 알림 시스템
 
-* GitHub Actions 기반 완전 자동화
-* OAuth 토큰 자동 갱신 및 Secret 업데이트
-* Selenium 기반 동적 페이지 크롤링
+**Tech Stack**
+`Python` `Selenium` `GitHub Actions` `Kakao Talk API` `Discord Webhook`
 
-**Stack**
-`Python` `GitHub Actions` `Selenium`
+#### What I Solved
 
-🔗 https://github.com/camellia-ver/baseball-alert
+* GitHub Actions 환경에서 별도 DB 없이 상태를 유지해야 하는 문제 해결
+* 카카오 OAuth 토큰 만료로 인한 인증 실패 문제 자동화
+* 동적으로 렌더링되는 KBO 경기 정보의 안정적인 수집 구현
+
+#### Result
+
+* `pending_games.json` 기반 워크플로우 간 상태 공유 구현
+* Refresh Token을 활용한 OAuth 토큰 자동 갱신 및 GitHub Secrets 업데이트
+* 경기 일정, 결과, 하이라이트 정보를 자동으로 수집·전송하는 알림 시스템 구축
+
+🔗 Repository
+https://github.com/camellia-ver/baseball-alert
 
 ---
 
-### BudgetManager
+### 💰 BudgetManager
 
 WinForms 기반 개인 가계부 애플리케이션
 
-* MVC 패턴 구조 설계
-* CSV / Excel Import & Export
-* ScottPlot 통계 시각화
+**Tech Stack**
+`C#` `.NET 8` `WinForms` `ScottPlot`
 
-**Stack**
-`C#` `.NET 8` `WinForms`
+#### What I Solved
 
-🔗 https://github.com/camellia-ver/BudgetManager
+* UI와 비즈니스 로직이 혼재되는 데스크톱 애플리케이션 구조 개선
+* 다양한 형식의 가계부 데이터를 유연하게 관리할 수 있는 파일 처리 기능 구현
+* 사용자의 소비 패턴을 직관적으로 파악할 수 있는 시각화 기능 제공
+
+#### Result
+
+* MVC 패턴을 적용하여 유지보수성과 확장성 확보
+* CSV 및 Excel 기반 데이터 Import / Export 기능 구현
+* ScottPlot을 활용한 자산 및 소비 통계 시각화 제공
+
+🔗 Repository
+https://github.com/camellia-ver/BudgetManager
+
 
 ---
 
