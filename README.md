@@ -181,9 +181,13 @@ https://github.com/camellia-ver/BudgetManager
 
 ## 🎯 Currently Learning
 Spring Security & JWT
+
 Docker & Containerization
+
 Cloud Deployment
+
 AI 활용 개발 생산성 향상
+
 대규모 서비스 아키텍처
 
 ## 🎯 Next Challenges
