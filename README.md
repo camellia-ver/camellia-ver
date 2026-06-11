@@ -1,41 +1,47 @@
 # 안녕하세요 👋
 
-백엔드 개발자로 성장하며 **문제를 발견하고, 자동화와 최적화를 통해 해결하는 과정**을 즐깁니다.
+백엔드 개발자로 성장하며
 
-* ☕ Java & Spring Boot 기반 백엔드 개발
-* ⚡ Reactive Programming (WebFlux, Reactor)
-* 🗄 MySQL 데이터 모델링 및 성능 최적화
-* 🤖 Python 기반 데이터 수집 및 자동화
-* 🚀 GitHub Actions를 활용한 CI/CD 및 운영 자동화
+반복적인 작업을 자동화하고,
+외부 데이터와 서비스를 연결하여
+사용자가 실제로 사용할 수 있는 시스템을 만드는 것을 좋아합니다.
 
----
+Java & Spring Boot 기반 백엔드 개발과
+Python 기반 데이터 자동화 프로젝트를 지속적으로 개발하고 있습니다.
+
+# 🚀 About Me
+
+🌱 사이드 프로젝트를 통한 실전 경험 축적
+
+☕ Java & Spring Boot 백엔드 개발
+
+🗄 MySQL 데이터 모델링 및 성능 최적화
+
+🤖 Python 기반 데이터 수집 및 자동화
+
+🚀 GitHub Actions 활용 CI/CD 및 운영 자동화
+
 ## 🛠 Tech Stacks
 
-### 💻 Java & Web Backend
-<img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white"/> <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring&logoColor=white"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+### Languages
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B)
 
-### ⚙️ Automation & Data Engineering
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white"/>
+### Backend & Database
+![SpringBoot](https://img.shields.io/badge/springboot-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white) 
+![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) 
 
-### 🏛️ C# & .NET Ecosystem 
-<img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white"/> <img src="https://img.shields.io/badge/--.NET_8-512BD4?style=flat-square&logo=.net&logoColor=white"/> <img src="https://img.shields.io/badge/WinForms-512BD4?style=flat-square"/>
+### DevOps & Tools
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 
-### 🔬 Experienced & Learning 
-<img src="https://img.shields.io/badge/Spring_WebFlux-6DB33F?style=flat-square&logo=spring&logoColor=white"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
-
----
-
-## 🎯 Interests
-
-* Backend Architecture
-* Reactive Programming
-* Performance Optimization
-* Data Engineering
-* Automation & DevOps
+### .NET Ecosystem
+![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) 
+![Windows Forms](https://img.shields.io/badge/Windows%20Forms-5C2D91?style=for-the-badge&logo=windows&logoColor=white)
 
 ---
 
-## 🚀 Project
+## 📌 Featured Projects
 
 ### 🌤 ClearSky
 
@@ -154,18 +160,31 @@ WinForms 기반 개인 가계부 애플리케이션
 🔗 Repository
 https://github.com/camellia-ver/BudgetManager
 
-
----
-
 ## 🏆 Key Achievements
 
-* Reactive Architecture 기반 비동기 API 처리 경험
-* 사용자 요청 중심 캐싱 전략 설계
-* GitHub Actions 무상태 환경 상태 관리 구현
-* OAuth 토큰 라이프사이클 자동화
-* 대용량 데이터 병렬 처리 최적화 경험
+✅ WebFlux + Reactor 기반 비동기 API 집계 서비스 구현
+
+✅ GitHub Actions 환경에서 JSON 기반 상태 저장 설계
+
+✅ OAuth Refresh Token 자동 갱신 및 Secret 업데이트 자동화
+
+✅ 대용량 주가 데이터 병렬 적재 및 처리 최적화
+
+✅ 외부 API 기반 실시간 데이터 수집·가공·알림 시스템 구축
 
 ---
+## 📊 GitHub Stats
+![](https://github-readme-stats.shion.dev/api?username=camellia-ver&theme=github_dark_dimmed&hide_border=false&include_all_commits=true&count_private=false&hide_rank=true&hide=stars,prs,issues,contribs)<br/>
+![](https://github-readme-stats.shion.dev/api/top-langs/?username=camellia-ver&theme=github_dark_dimmed&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
+
+---
+
+## 🎯 Currently Learning
+Spring Security & JWT
+Docker & Containerization
+Cloud Deployment
+AI 활용 개발 생산성 향상
+대규모 서비스 아키텍처
 
 ## 🎯 Next Challenges
 
