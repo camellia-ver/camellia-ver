@@ -24,9 +24,9 @@ Python 기반 데이터 자동화 프로젝트를 지속적으로 개발하고 �
 ## 🛠 Tech Stacks
 
 ### Languages
-![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B)
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
 
 ### Backend & Database
 ![SpringBoot](https://img.shields.io/badge/springboot-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white) 
@@ -52,15 +52,15 @@ Python 기반 데이터 자동화 프로젝트를 지속적으로 개발하고 �
 
 #### What I Solved
 
-* Reactor `Mono.zip()` 기반 비동기 병렬 API 처리
-* 사용자 요청 지역 중심 캐싱 전략 적용
-* 공공데이터 코드값 추상화 및 표준화 계층 설계
+* 여러 외부 공공데이터 API를 순차 호출하던 구조를 `Mono.zip()` 기반 비동기 병렬 처리로 전환
+* 사용자 요청 지역 중심 캐싱 전략을 적용해 동일 지역에 대한 중복 API 호출 제거
+* 공공데이터 코드값을 추상화하고 표준화하는 계층을 별도로 설계해 외부 스펙 변경에 대한 영향 최소화
 
 #### Result
 
-* API 호출량 및 서버 부하 감소
-* 응답 지연 최소화
-* 외부 API 의존성 감소 및 유지보수성 향상
+* 순차 호출 대비 응답 대기 시간을 줄이고 API 호출 횟수를 감소시켜 서버 부하 완화
+* 캐싱 계층 도입으로 동일 요청에 대한 외부 API 의존도 감소
+* 표준화 계층 분리로 외부 API 스펙 변경 시 영향 범위를 해당 계층으로 한정, 유지보수성 향상
 
 🔗 Repository
 https://github.com/camellia-ver/ClearSky
@@ -76,15 +76,15 @@ https://github.com/camellia-ver/ClearSky
 
 #### What I Solved
 
-* 대용량 CSV 데이터 적재 시 발생하는 초기 로딩 지연 문제 개선
-* pykrx API 차단 문제 대응을 위한 안정적인 수집 파이프라인 구축
-* 머신러닝 모델 단일 예측의 한계를 보완하기 위한 앙상블 모델 적용
+* 단일 스레드로 전체 CSV를 순회하던 데이터 적재 방식을 Batch 및 병렬 처리 구조로 전환
+* pykrx API 호출 시 발생하는 차단(Block) 문제에 대응하기 위해 요청 간격 제어 및 예외 처리 기반의 수집 파이프라인 구축
+* 단일 머신러닝 모델의 예측 편차를 보완하기 위해 Random Forest, XGBoost, LightGBM을 결합한 앙상블 구조 적용
 
 #### Result
 
-* Batch 및 병렬 처리를 통해 데이터 적재 시간 단축
-* 예외 처리 및 요청 제어를 통해 데이터 수집 안정성 확보
-* Random Forest, XGBoost, LightGBM 기반 예측 결과 제공
+* 순차 처리 대비 대용량 CSV 적재 시간을 단축하고 초기 로딩 지연 문제 개선
+* 요청 제어 및 예외 처리를 통해 데이터 수집 중단 없이 안정적으로 동작하는 파이프라인 확보
+* 여러 모델의 예측 결과를 종합해 단일 모델 대비 예측 안정성 향상
 
 🔗 Repository
 https://github.com/camellia-ver/stock-predictor
@@ -99,15 +99,15 @@ https://github.com/camellia-ver/stock-predictor
 
 #### What I Solved
 
-* 주가 데이터와 뉴스 데이터를 결합한 이벤트 기반 알림 시스템 구현
-* 여러 외부 API를 활용한 데이터 수집 및 통합 처리
-* 임계값 기반 모니터링을 통한 자동 뉴스 탐지 프로세스 구축
+* 주가 데이터와 뉴스 데이터를 결합해 가격 변동이 발생했을 때만 동작하는 이벤트 기반 알림 구조 설계
+* pykrx와 NewsAPI 두 외부 API의 응답 형식을 통합 처리하는 수집 로직 구현
+* 가격 변동률 임계값을 기준으로 모니터링 주기를 제어해 불필요한 API 호출 최소화
 
 #### Result
 
-* 가격 급등락 발생 시 관련 뉴스를 자동 수집 및 전송
-* 사용자 개입 없이 동작하는 모니터링 파이프라인 구축
-* Discord 기반 실시간 알림 시스템 구현
+* 가격 급등락 발생 시에만 관련 뉴스를 자동으로 수집·전송하여 평소에는 불필요한 호출 없이 동작
+* 사용자 개입 없이 주기적으로 동작하는 모니터링 파이프라인 구축
+* Discord Webhook을 통한 실시간 알림으로 별도 알림 서버 없이 즉시 확인 가능
 
 🔗 Repository
 https://github.com/camellia-ver/stock-news-alert
@@ -123,15 +123,15 @@ KBO 경기 정보 및 TV 중계 자동 알림 시스템
 
 #### What I Solved
 
-* GitHub Actions 환경에서 별도 DB 없이 상태를 유지해야 하는 문제 해결
-* 카카오 OAuth 토큰 만료로 인한 인증 실패 문제 자동화
-* 동적으로 렌더링되는 KBO 경기 정보의 안정적인 수집 구현
+* GitHub Actions의 매 실행마다 환경이 초기화되는 특성으로 인해 DB 없이 상태를 유지해야 하는 문제를 `pending_games.json` 파일 기반 상태 공유로 해결
+* 카카오 OAuth 토큰이 만료되면 알림이 끊기는 문제를 Refresh Token 기반 자동 갱신 로직으로 해결
+* JavaScript로 동적 렌더링되는 KBO 경기 정보를 Selenium 기반으로 안정적으로 수집
 
 #### Result
 
-* `pending_games.json` 기반 워크플로우 간 상태 공유 구현
-* Refresh Token을 활용한 OAuth 토큰 자동 갱신 및 GitHub Secrets 업데이트
-* 경기 일정, 결과, 하이라이트 정보를 자동으로 수집·전송하는 알림 시스템 구축
+* 별도 DB 없이도 워크플로우 실행 간 상태를 유지하며 중복 알림 없이 동작
+* Refresh Token 자동 갱신 및 GitHub Secrets 업데이트를 통해 토큰 만료로 인한 알림 중단 없이 지속 운영
+* 경기 일정, 결과, 하이라이트 정보를 사람의 개입 없이 자동으로 수집·전송
 
 🔗 Repository
 https://github.com/camellia-ver/baseball-alert
@@ -147,35 +147,38 @@ WinForms 기반 개인 가계부 애플리케이션
 
 #### What I Solved
 
-* UI와 비즈니스 로직이 혼재되는 데스크톱 애플리케이션 구조 개선
-* 다양한 형식의 가계부 데이터를 유연하게 관리할 수 있는 파일 처리 기능 구현
-* 사용자의 소비 패턴을 직관적으로 파악할 수 있는 시각화 기능 제공
+* UI 코드와 비즈니스 로직이 한 클래스에 혼재되어 있던 구조를 MVC 패턴으로 분리
+* 사용자마다 다른 형식의 가계부 데이터를 처리할 수 있도록 CSV / Excel Import·Export 기능 구현
+* 텍스트 형태로만 확인 가능했던 소비 내역을 ScottPlot 기반 그래프로 시각화
 
 #### Result
 
-* MVC 패턴을 적용하여 유지보수성과 확장성 확보
-* CSV 및 Excel 기반 데이터 Import / Export 기능 구현
-* ScottPlot을 활용한 자산 및 소비 통계 시각화 제공
+* MVC 패턴 적용으로 기능 추가 및 UI 변경 시 비즈니스 로직에 미치는 영향 최소화
+* CSV/Excel Import·Export 지원으로 기존에 다른 형식으로 관리하던 가계부 데이터도 그대로 활용 가능
+* 소비 패턴을 그래프로 한눈에 확인할 수 있어 텍스트 목록만 보던 것보다 직관적인 분석 가능
 
 🔗 Repository
 https://github.com/camellia-ver/BudgetManager
 
 ## 🏆 Key Achievements
 
-✅ WebFlux + Reactor 기반 비동기 API 집계 서비스 구현
+✅ WebFlux + Reactor 기반 비동기 API 병렬 집계 서비스 구현
 
-✅ GitHub Actions 환경에서 JSON 기반 상태 저장 설계
+✅ GitHub Actions 환경에서 JSON 기반 상태 저장 구조 설계
 
 ✅ OAuth Refresh Token 자동 갱신 및 Secret 업데이트 자동화
 
-✅ 대용량 주가 데이터 병렬 적재 및 처리 최적화
+✅ 대용량 주가 데이터 Batch/병렬 적재 및 처리 구조 설계
 
 ✅ 외부 API 기반 실시간 데이터 수집·가공·알림 시스템 구축
 
 ---
 ## 📊 GitHub Stats
-![](https://github-readme-stats.shion.dev/api?username=camellia-ver&theme=github_dark_dimmed&hide_border=false&include_all_commits=true&count_private=false&hide_rank=true&hide=stars,prs,issues,contribs)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=camellia-ver&theme=github_dark_dimmed&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
+
+<p align="left">
+  <img height="180em" src="https://github-readme-stats.shion.dev/api?username=camellia-ver&theme=github_dark_dimmed&hide_border=false&include_all_commits=true&count_private=false&hide_rank=true&hide=stars,prs,issues,contribs"/>
+  <img height="180em" src="https://github-readme-stats.shion.dev/api/top-langs/?username=camellia-ver&theme=github_dark_dimmed&hide_border=false&include_all_commits=true&count_private=false&layout=compact"/>
+</p>
 
 ---
 
@@ -198,4 +201,7 @@ https://github.com/camellia-ver/BudgetManager
 
 ## 📫 Contact
 
-E-mail: jakahi435@gmail.com
+* 📧 Email: jakahi435@gmail.com
+* 💻 GitHub: [@camellia-ver](https://github.com/camellia-ver)
+/*-- * 📝 Blog: (블로그 주소를 입력해주세요) --*/
+
