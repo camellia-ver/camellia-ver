@@ -203,5 +203,4 @@ https://github.com/camellia-ver/BudgetManager
 
 * 📧 Email: jakahi435@gmail.com
 * 💻 GitHub: [@camellia-ver](https://github.com/camellia-ver)
-/*-- * 📝 Blog: (블로그 주소를 입력해주세요) --*/
 
