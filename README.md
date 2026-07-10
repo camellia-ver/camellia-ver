@@ -92,21 +92,23 @@ https://github.com/camellia-ver/stock-predictor
 ---
 ### 📈 Stock News Alert
 
-주가 변동률이 임계값을 초과할 경우 관련 뉴스를 자동 수집하여 Discord로 전송하는 자동화 서비스
+특정 주식 종목의 가격 변동률이 임계값을 초과할 경우, 관련 최신 뉴스를 자동 수집하고 LLM API로 하나의 인사이트로 요약하여 Discord로 전송하는 알림 자동화 서비스
 
 **Tech Stack**
-`Python` `pykrx` `NewsAPI` `Discord Webhook`
+`Python` `FinanceDataReader` `pykrx` `NewsAPI` `Naver News API` `Gemini API` `Discord Webhook` `tkinter`
 
 #### What I Solved
 
-* 주가 데이터와 뉴스 데이터를 결합해 가격 변동이 발생했을 때만 동작하는 이벤트 기반 알림 구조 설계
-* pykrx와 NewsAPI 두 외부 API의 응답 형식을 통합 처리하는 수집 로직 구현
-* 가격 변동률 임계값을 기준으로 모니터링 주기를 제어해 불필요한 API 호출 최소화
+* 주가 데이터와 뉴스 데이터를 결합해 가격 변동이 임계값(예: ±5%)을 초과할 때만 동작하는 이벤트 기반 알림 구조 설계
+* pykrx/FinanceDataReader, NewsAPI, Naver News API 등 여러 외부 API의 응답 형식을 통합 처리하는 수집 로직 구현
+* 수집된 다수의 뉴스 기사를 Gemini API에 전달해 종목별 하나의 요약된 인사이트로 정리하는 요약 파이프라인 구축
+* config.py의 종목 목록·임계값 등 설정값을 코드 수정 없이 변경할 수 있도록 tkinter 기반 GUI 설정 편집기(gui_config.py) 구현
 
 #### Result
 
-* 가격 급등락 발생 시에만 관련 뉴스를 자동으로 수집·전송하여 평소에는 불필요한 호출 없이 동작
-* 사용자 개입 없이 주기적으로 동작하는 모니터링 파이프라인 구축
+* 가격 급등락 발생 시에만 관련 뉴스를 자동으로 수집·요약·전송하여 평소에는 불필요한 API 호출 없이 동작
+* 여러 뉴스 기사를 매번 직접 읽지 않아도 LLM이 정리한 하나의 인사이트로 빠르게 상황 파악 가능
+* GUI 설정 편집기 도입으로 종목 추가/삭제, 임계값 조정 등 운영 편의성 향상
 * Discord Webhook을 통한 실시간 알림으로 별도 알림 서버 없이 즉시 확인 가능
 
 🔗 Repository
