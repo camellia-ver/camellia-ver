@@ -31,6 +31,7 @@ Python 기반 데이터 자동화 프로젝트를 지속적으로 개발하고 �
 ### Backend & Database
 ![SpringBoot](https://img.shields.io/badge/springboot-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white) 
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) 
+![PostgreSQL](https://img.shields.io/badge/postgresql-4169E1.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ### DevOps & Tools
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
@@ -42,6 +43,35 @@ Python 기반 데이터 자동화 프로젝트를 지속적으로 개발하고 �
 ---
 
 ## 📌 Featured Projects
+
+### 💰 MoneyLog
+
+지출을 기록하고, 숫자로 이해하는 개인 가계부 웹앱
+
+**Tech Stack**
+`Spring Boot` `Spring Security` `JWT` `MySQL` `PostgreSQL` `JPA` `Gradle`
+
+#### What I Solved
+
+* `JwtAuthenticationFilter`를 직접 구현해 Stateless 인증 구조를 구축하고, 로그인 5회 연속 실패 시 15분간 계정을 잠그는 보호 로직 설계
+* 도메인별로 흩어져 있던 요청/응답 DTO를 중첩 정적 클래스(nested static class)로 통합해 파일 구조 정리
+* 도메인별 예외(`NotFound`, `AccessDenied`, `Duplicate` 등)를 세분화하고 `GlobalExceptionHandler`로 일관된 에러 응답 포맷 구축
+* AI 기반 QA 서브에이전트를 별도로 구성해 구현 로직과 분리된 관점에서 검증을 진행, 회원 탈퇴 실패·토큰 미삭제 등 자체 검증만으로는 놓치기 쉬운 이슈 발견
+
+#### Result
+
+* JPQL 기반 집계 쿼리로 기간별 총 지출과 카테고리별 지출 비중을 통계 대시보드로 제공
+* DTO 파일 수를 15개 → 8개로 약 47% 축소해 코드 탐색 및 유지보수 편의성 향상
+* 별도 QA 프로세스 도입으로 로그아웃/회원 탈퇴 시 토큰이 삭제되지 않는 보안 이슈를 배포 전에 사전 발견 및 수정
+* 로컬(MySQL) / 배포(PostgreSQL) 환경을 분리 운영하며 Swagger UI로 API 명세 자동화
+
+🔗 Demo
+https://moneylog-4yk2.onrender.com
+
+🔗 Repository
+https://github.com/camellia-ver/MoneyLog
+
+---
 
 ### 🌤 ClearSky
 
@@ -164,6 +194,8 @@ https://github.com/camellia-ver/BudgetManager
 
 ## 🏆 Key Achievements
 
+✅ Spring Security + JWT 기반 인증/인가 시스템 및 계정 잠금 로직 구현
+
 ✅ WebFlux + Reactor 기반 비동기 API 병렬 집계 서비스 구현
 
 ✅ GitHub Actions 환경에서 JSON 기반 상태 저장 구조 설계
@@ -173,6 +205,8 @@ https://github.com/camellia-ver/BudgetManager
 ✅ 대용량 주가 데이터 Batch/병렬 적재 및 처리 구조 설계
 
 ✅ 외부 API 기반 실시간 데이터 수집·가공·알림 시스템 구축
+
+✅ AI 서브에이전트 기반 QA 프로세스 도입으로 보안 이슈 사전 발견
 
 ---
 ## 📊 GitHub Stats
@@ -205,4 +239,3 @@ https://github.com/camellia-ver/BudgetManager
 
 * 📧 Email: jakahi435@gmail.com
 * 💻 GitHub: [@camellia-ver](https://github.com/camellia-ver)
-
